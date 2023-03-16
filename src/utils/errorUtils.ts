@@ -7,6 +7,7 @@ type AppErrorTypes =
   
 export interface AppError {
   type: AppErrorTypes;
+  name: string;
   message: string;
 }
 
@@ -24,21 +25,21 @@ export function errorTypeToStatusCode(type: AppErrorTypes) {
 }
 
 export function badRequestError(message?: string): AppError {
-  return { type: "bad_request", message };
+  return { type: "bad_request", name: 'BadRequest', message };
 }
 
 export function conflictError(message?: string): AppError {
-  return { type: "conflict", message };
+  return { type: "conflict", name: 'Conflict', message };
 }
 
 export function notFoundError(message?: string): AppError {
-  return { type: "not_found", message };
+  return { type: "not_found", name: 'NotFound', message };
 }
 
 export function unauthorizedError(message?: string): AppError {
-  return { type: "unauthorized", message };
+  return { type: "unauthorized", name: 'Unauthorized', message };
 }
 
 export function wrongSchemaError(message?: string): AppError {
-  return { type: "wrong_schema", message };
+  return { type: "wrong_schema", name: 'WrongSchema', message };
 }

@@ -9,7 +9,8 @@
     "dev": "nodemon src/server.ts",
     "prisma:reset": "prisma migrate reset",
     "prisma:migrate": "prisma migrate dev",
-    "test:unit": "dotenv -e .env.test jest -- -i --coverage --testPathPattern=tests/unit"
+    "test:unit": "dotenv -e .env.test jest -- -i --coverage --testPathPattern=tests",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
     "@types/express": "^4.17.13",
-    "@types/jest": "^28.1.6",
+    "@types/jest": "^28.1.8",
     "@types/node": "^18.6.1",
     "@types/supertest": "^2.0.12",
     "dotenv-cli": "^6.0.0",
@@ -25,7 +26,7 @@
     "nodemon": "^2.0.19",
     "prisma": "^4.1.1",
     "supertest": "^6.2.4",
-    "ts-jest": "^28.0.7",
+    "ts-jest": "^28.0.8",
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   },
